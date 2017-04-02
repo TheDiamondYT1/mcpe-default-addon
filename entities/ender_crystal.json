@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:ender_crystal"
@@ -11,6 +10,5 @@
         "height": 0.98
       }
     }
-
   }
 }

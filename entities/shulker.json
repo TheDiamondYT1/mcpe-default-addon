@@ -83,28 +83,29 @@
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:shulker"
       },
       "minecraft:type_family": {
-        "family": [ "shulker", "monster" ]
+        "family": [
+          "shulker",
+          "monster"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
         "suffocateTime": 0
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:fire_immune": true,
       "minecraft:health": {
         "value": 30,
         "max": 30
       },
       "minecraft:movement": {
-        "value": 0.0,
-        "max": 0.0
+        "value": 0,
+        "max": 0
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/shulker.json"
@@ -122,7 +123,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 1,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:shooter": {
@@ -143,22 +144,24 @@
       "minecraft:behavior.nearest_attackable_target": {
         "priority": 3,
         "entity_types": {
-          "filters": { "other_with_families": [ "player" ] },
+          "filters": {
+            "other_with_families": [
+              "player"
+            ]
+          },
           "max_dist": 16
         },
         "must_see": true
       },
-      "minecraft:navigation.walk": {
-      },
-      "minecraft:movement.basic": {
-      },
+      "minecraft:navigation.walk": {},
+      "minecraft:movement.basic": {},
       "minecraft:interact": [
         {
           "on_interact": {
             "filters": {
               "other_with_item": "dye:0",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_black"
           },
@@ -169,7 +172,7 @@
             "filters": {
               "other_with_item": "dye:8",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_gray"
           },
@@ -180,7 +183,7 @@
             "filters": {
               "other_with_item": "dye:7",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_silver"
           },
@@ -191,7 +194,7 @@
             "filters": {
               "other_with_item": "dye:15",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_white"
           },
@@ -202,7 +205,7 @@
             "filters": {
               "other_with_item": "dye:12",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_light_blue"
           },
@@ -213,7 +216,7 @@
             "filters": {
               "other_with_item": "dye:14",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_orange"
           },
@@ -224,7 +227,7 @@
             "filters": {
               "other_with_item": "dye:1",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_red"
           },
@@ -235,7 +238,7 @@
             "filters": {
               "other_with_item": "dye:4",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_blue"
           },
@@ -246,7 +249,7 @@
             "filters": {
               "other_with_item": "dye:5",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_purple"
           },
@@ -257,7 +260,7 @@
             "filters": {
               "other_with_item": "dye:13",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_magenta"
           },
@@ -268,7 +271,7 @@
             "filters": {
               "other_with_item": "dye:9",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_pink"
           },
@@ -279,7 +282,7 @@
             "filters": {
               "other_with_item": "dye:3",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_brown"
           },
@@ -290,7 +293,7 @@
             "filters": {
               "other_with_item": "dye:11",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_yellow"
           },
@@ -301,7 +304,7 @@
             "filters": {
               "other_with_item": "dye:10",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_lime"
           },
@@ -312,7 +315,7 @@
             "filters": {
               "other_with_item": "dye:2",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_green"
           },
@@ -323,7 +326,7 @@
             "filters": {
               "other_with_item": "dye:6",
               "other_with_families": "player",
-              "player_with_instabuild" : true
+              "player_with_instabuild": true
             },
             "event": "minecraft:turn_cyan"
           },
@@ -331,7 +334,6 @@
         }
       ]
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {

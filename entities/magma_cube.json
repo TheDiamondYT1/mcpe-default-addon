@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:slime_large": {
         "minecraft:collision_box": {
@@ -22,7 +21,6 @@
           "table": "loot_tables/entities/magma_cube.json"
         }
       },
-
       "minecraft:slime_medium": {
         "minecraft:collision_box": {
           "width": 0.78,
@@ -42,7 +40,6 @@
           "table": "loot_tables/entities/magma_cube.json"
         }
       },
-
       "minecraft:slime_small": {
         "minecraft:collision_box": {
           "width": 0.52,
@@ -59,44 +56,51 @@
           "damage": 2
         }
       },
-
       "minecraft:slime_calm": {
         "minecraft:movement.jump": {
-          "jump_delay": [ 0.5, 1.5 ]
+          "jump_delay": [
+            0.5,
+            1.5
+          ]
         }
       },
       "minecraft:slime_aggressive": {
         "minecraft:movement.jump": {
-          "jump_delay": [ 0.16, 0.5 ]
+          "jump_delay": [
+            0.16,
+            0.5
+          ]
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:magma_cube"
       },
       "minecraft:type_family": {
-        "family": [ "magmacube", "monster" ]
+        "family": [
+          "magmacube",
+          "monster"
+        ]
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:fire_immune": true,
       "minecraft:burns_in_daylight": false,
       "minecraft:fall_damage": {
-        "value": 0.0
+        "value": 0
       },
       "minecraft:navigation.walk": {
         "can_float": true,
         "avoid_water": true
       },
-      "minecraft:jump.static": {
-      },
+      "minecraft:jump.static": {},
       "minecraft:movement.jump": {
-        "jump_delay": [ 0.5, 1.5 ]
+        "jump_delay": [
+          0.5,
+          1.5
+        ]
       },
-      "minecraft:can_climb": {
-      },
+      "minecraft:can_climb": {},
       "minecraft:on_target_acquired": {
         "event": "minecraft:become_aggressive",
         "target": "self"
@@ -121,13 +125,14 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 16
           }
         ]
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {

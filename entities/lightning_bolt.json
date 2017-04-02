@@ -1,20 +1,17 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
-    "component_groups": {
-    },
-
+    "component_groups": {},
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:lightning_bolt"
       },
       "minecraft:type_family": {
-        "family":["lightning"]          
+        "family": [
+          "lightning"
+        ]
       }
     },
-
-    "events": {
-    }
+    "events": {}
   }
 }

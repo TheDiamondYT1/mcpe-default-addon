@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:vindicator_aggro": {
         "minecraft:angry": {
@@ -20,14 +19,17 @@
           "must_see": true,
           "entity_types": [
             {
-              "filters": { "other_without_families": [ "illager" ] },
+              "filters": {
+                "other_without_families": [
+                  "illager"
+                ]
+              },
               "max_dist": 12
             }
           ]
         }
-      } 
+      }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:vindicator"
@@ -47,10 +49,12 @@
           }
         ]
       },
-
-      // vindicator Components
       "minecraft:type_family": {
-        "family": [ "vindicator", "monster", "illager" ]
+        "family": [
+          "vindicator",
+          "monster",
+          "illager"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
@@ -74,10 +78,8 @@
       "minecraft:navigation.walk": {
         "can_float": true
       },
-      "minecraft:movement.basic": {
-      },
-      "minecraft:jump.static": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
       "minecraft:follow_range": {
         "value": 12,
         "max": 12
@@ -88,8 +90,6 @@
       "minecraft:equipment": {
         "table": "loot_tables/entities/vindicator_gear.json"
       },
-
-      // vindicator Behaviors
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -124,13 +124,19 @@
         "must_see": true,
         "entity_types": [
           {
-            "filters": { "other_with_families": [ "player", "irongolem", "snowgolem", "villager" ] },
+            "filters": {
+              "other_with_families": [
+                "player",
+                "irongolem",
+                "snowgolem",
+                "villager"
+              ]
+            },
             "max_dist": 12
           }
         ]
       }
     },
-
     "events": {
       "minecraft:become_aggro": {
         "add": {

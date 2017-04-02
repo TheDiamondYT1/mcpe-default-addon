@@ -1,33 +1,31 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:snowgolem_leashed": {
-          "minecraft:behavior.move_towards_restriction": {
+        "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
       "minecraft:snowman_sheared": {
-        "minecraft:is_sheared": {
-        }
-      }      
+        "minecraft:is_sheared": {}
+      }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:snow_golem"
       },
       "minecraft:type_family": {
-        "family": [ "snowgolem" ]
+        "family": [
+          "snowgolem"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
         "suffocateTime": 0
       },
-	  "minecraft:nameable": {
-	  },
+      "minecraft:nameable": {},
       "minecraft:collision_box": {
         "width": 0.4,
         "height": 1.8
@@ -41,21 +39,18 @@
       },
       "minecraft:movement": {
         "value": 0.2
-      },      
+      },
       "minecraft:navigation.walk": {
         "avoid_water": true
       },
-      "minecraft:movement.basic": {
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:attack": {
+        "damage": 2
       },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
-     "minecraft:attack": {
-      "damage": 2
-     },
-     "minecraft:fall_damage": {
-       "value": 0.0
+      "minecraft:fall_damage": {
+        "value": 0
       },
       "minecraft:interact": [
         {
@@ -75,11 +70,10 @@
           }
         }
       ],
-      
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -89,7 +83,6 @@
           "target": "self"
         }
       },
-
       "minecraft:behavior.ranged_attack": {
         "priority": 1,
         "speed_multiplier": 1.25,
@@ -102,7 +95,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 3,
-        "look_distance": 6.0
+        "look_distance": 6
       },
       "minecraft:behavior.random_look_around": {
         "priority": 4
@@ -111,18 +104,18 @@
         "priority": 1,
         "entity_types": [
           {
-            "filters": { "other_with_families": "monster" },
+            "filters": {
+              "other_with_families": "monster"
+            },
             "within_default": 6
           }
         ],
         "must_reach": true
       }
     },
-
     "events": {
       "minecraft:on_sheared": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:snowman_sheared"

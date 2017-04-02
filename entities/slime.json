@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:slime_large": {
         "minecraft:collision_box": {
@@ -19,7 +18,6 @@
           "damage": 4
         }
       },
-
       "minecraft:slime_medium": {
         "minecraft:collision_box": {
           "width": 0.78,
@@ -36,7 +34,6 @@
           "damage": 2
         }
       },
-
       "minecraft:slime_small": {
         "minecraft:collision_box": {
           "width": 0.52,
@@ -56,25 +53,32 @@
           "table": "loot_tables/entities/slime.json"
         }
       },
-
       "minecraft:slime_calm": {
         "minecraft:movement.jump": {
-          "jump_delay": [ 0.5, 1.5 ]
+          "jump_delay": [
+            0.5,
+            1.5
+          ]
         }
       },
       "minecraft:slime_aggressive": {
         "minecraft:movement.jump": {
-          "jump_delay": [ 0.16, 0.5 ]
+          "jump_delay": [
+            0.16,
+            0.5
+          ]
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:slime"
       },
       "minecraft:type_family": {
-        "family": [ "slime", "monster" ]
+        "family": [
+          "slime",
+          "monster"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
@@ -84,12 +88,13 @@
         "can_float": true,
         "avoid_water": true
       },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:movement.jump": {
-        "jump_delay": [ 0.5, 1.5 ]
+        "jump_delay": [
+          0.5,
+          1.5
+        ]
       },
       "minecraft:on_target_acquired": {
         "event": "minecraft:become_aggressive",
@@ -99,8 +104,7 @@
         "event": "minecraft:become_calm",
         "target": "self"
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:behavior.slime_float": {
         "priority": 1
       },
@@ -117,13 +121,18 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": [ "player", "irongolem", "snowgolem" ] },
+            "filters": {
+              "other_with_families": [
+                "player",
+                "irongolem",
+                "snowgolem"
+              ]
+            },
             "max_dist": 16
           }
         ]
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {

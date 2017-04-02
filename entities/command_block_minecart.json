@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:command_block_active": {
         "minecraft:rail_sensor": {
@@ -25,24 +24,23 @@
           "on_activate": {
             "event": "minecraft:command_block_activate"
           }
-        }        
+        }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:command_block_minecart"
       },
       "minecraft:type_family": {
-        "family": [ "minecart" ]
+        "family": [
+          "minecart"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.5,
         "height": 0.9
       },
-      "minecraft:rail_movement": {
-
-      },
+      "minecraft:rail_movement": {},
       "minecraft:inventory": {
         "container_type": "minecart_command_block",
         "inventory_size": 1
@@ -53,7 +51,6 @@
         "ticking": false
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {

@@ -5,9 +5,10 @@
       "minecraft:identifier": {
         "id": "minecraft:vex"
       },
-
       "minecraft:type_family": {
-        "family": [ "vex" ]
+        "family": [
+          "vex"
+        ]
       },
       "minecraft:equipment": {
         "table": "loot_tables/entities/vex_gear.json"
@@ -24,20 +25,16 @@
         "height": 0.8
       },
       "minecraft:movement": {
-        "value": 1.0,
-        "max": 1.0
+        "value": 1,
+        "max": 1
       },
       "minecraft:navigation.walk": {
         "can_float": true
       },
-      "minecraft:movement.vex": {
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
-      "minecraft:nameable": {
-      },
+      "minecraft:movement.vex": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
+      "minecraft:nameable": {},
       "minecraft:fire_immune": true,
       "minecraft:behavior.float": {
         "priority": 0
@@ -52,7 +49,9 @@
         "priority": 3,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 70
           }
         ],
@@ -60,14 +59,16 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 9,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.look_at_entity": {
         "priority": 9,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02,
-        "filters": { "other_with_families": "mob" }
+        "filters": {
+          "other_with_families": "mob"
+        }
       },
       "minecraft:behavior.vex_copy_owner_target": {
         "priority": 2

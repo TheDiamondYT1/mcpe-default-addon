@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:primed_tnt": {
         "minecraft:explode": {
@@ -10,10 +9,8 @@
           "power": 3,
           "causesFire": false
         },
-        "minecraft:rail_sensor": {
-        },
-        "minecraft:is_ignited": {
-        }
+        "minecraft:rail_sensor": {},
+        "minecraft:is_ignited": {}
       },
       "minecraft:inactive": {
         "minecraft:rail_sensor": {
@@ -40,7 +37,9 @@
           },
           {
             "on_interact": {
-              "filters": {"other_with_components": "fire_aspect"},
+              "filters": {
+                "other_with_components": "fire_aspect"
+              },
               "event": "minecraft:on_prime",
               "target": "self"
             },
@@ -50,24 +49,22 @@
         ]
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:tnt_minecart"
       },
       "minecraft:type_family": {
-        "family": [ "minecart" ]
+        "family": [
+          "minecart"
+        ]
       },
       "minecraft:collision_box": {
         "width": 0.98,
         "height": 0.7
       },
-      "minecraft:rail_movement": {
-      },
-      "minecraft:is_stackable": {
-      }
+      "minecraft:rail_movement": {},
+      "minecraft:is_stackable": {}
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "add": {
@@ -89,6 +86,5 @@
         }
       }
     }
-
   }
 }

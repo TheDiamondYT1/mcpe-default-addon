@@ -1,11 +1,9 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:llama_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
         },
@@ -26,13 +24,11 @@
             "target": "self"
           }
         },
-
         "minecraft:behavior.follow_parent": {
           "priority": 5,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
-
       "minecraft:llama_adult": {
         "minecraft:loot": {
           "table": "loot_tables/entities/llama.json"
@@ -43,7 +39,7 @@
         },
         "minecraft:behavior.breed": {
           "priority": 4,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         },
         "minecraft:breedable": {
           "requireTame": true,
@@ -56,10 +52,11 @@
               "target": "baby"
             }
           },
-          "breedItems": [ "tile.hay_block" ]
+          "breedItems": [
+            "tile.hay_block"
+          ]
         }
       },
-
       "minecraft:strength_1": {
         "minecraft:strength": {
           "value": 1,
@@ -90,7 +87,6 @@
           "max": 5
         }
       },
-
       "minecraft:llama_creamy": {
         "minecraft:variant": {
           "value": 0
@@ -111,7 +107,6 @@
           "value": 3
         }
       },
-
       "minecraft:llama_wild": {
         "minecraft:rideable": {
           "seat_count": 1,
@@ -120,9 +115,12 @@
           ],
           "interact_text": "action.interact.mount",
           "seats": {
-            "position": [ 0.0, 1.25, -0.3 ]
+            "position": [
+              0,
+              1.25,
+              -0.3
+            ]
           }
-
         },
         "minecraft:tamemount": {
           "minTemper": 0,
@@ -162,11 +160,8 @@
           }
         }
       },
-
-
       "minecraft:llama_tamed": {
-        "minecraft:is_tamed": {
-        },
+        "minecraft:is_tamed": {},
         "minecraft:rideable": {
           "priority": 0,
           "seat_count": 1,
@@ -176,9 +171,12 @@
           ],
           "interact_text": "action.interact.ride.horse",
           "seats": {
-            "position": [ 0.0, 1.1, -0.2 ]
+            "position": [
+              0,
+              1.1,
+              -0.2
+            ]
           }
-
         },
         "minecraft:inventory": {
           "inventory_size": 16,
@@ -190,7 +188,9 @@
             {
               "slot": 1,
               "item": "carpet",
-              "accepted_items": [ "carpet" ]
+              "accepted_items": [
+                "carpet"
+              ]
             }
           ]
         }
@@ -211,20 +211,15 @@
           }
         ]
       },
-
       "minecraft:llama_chested": {
-        "minecraft:is_chested": {
-
-        }
+        "minecraft:is_chested": {}
       },
-
       "minecraft:llama_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
-
       "minecraft:llama_angry": {
         "minecraft:angry": {
           "duration": 4,
@@ -257,7 +252,6 @@
           "charge_charged_trigger": 1
         }
       },
-
       "minecraft:in_caravan": {
         "minecraft:damage_sensor": [
           {
@@ -266,26 +260,24 @@
           }
         ]
       }
-
     },
-
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:llama"
       },
       "minecraft:type_family": {
-        "family": [ "llama" ]
+        "family": [
+          "llama"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
         "suffocateTime": 0
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:health": {
         "value": {
-          "range_min": 15, 
+          "range_min": 15,
           "range_max": 30
         }
       },
@@ -296,18 +288,16 @@
       "minecraft:navigation.walk": {
         "can_float": true
       },
-      "minecraft:movement.basic": {
-      },
-      "minecraft:jump.static": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
       "minecraft:follow_range": {
         "value": 40,
         "max": 40
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -321,7 +311,6 @@
         "type": "llamaspit",
         "def": "minecraft:llama_spit"
       },
-
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -351,7 +340,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -360,7 +349,7 @@
       "minecraft:behavior.mount_pathing": {
         "priority": 1,
         "speed_multiplier": 1.25,
-        "target_dist": 0.0,
+        "target_dist": 0,
         "track_target": true
       },
       "minecraft:behavior.hurt_by_target": {
@@ -372,7 +361,9 @@
           "cause": "all",
           "deals_damage": true,
           "on_damage": {
-            "filters": { "is_not_in_caravan": "" },
+            "filters": {
+              "is_not_in_caravan": ""
+            },
             "event": "minecraft:become_angry"
           }
         }
@@ -383,8 +374,12 @@
         "entity_types": [
           {
             "filters": {
-              "other_with_families": [ "wolf" ],
-              "other_without_components": [ "minecraft:is_tamed" ]
+              "other_with_families": [
+                "wolf"
+              ],
+              "other_without_components": [
+                "minecraft:is_tamed"
+              ]
             },
             "max_dist": 10
           }
@@ -393,24 +388,29 @@
       },
       "minecraft:on_target_acquired": {
         "filters": {
-          "target_with_families": [ "wolf" ],
-          "target_without_components": [ "minecraft:is_tamed" ]
+          "target_with_families": [
+            "wolf"
+          ],
+          "target_without_components": [
+            "minecraft:is_tamed"
+          ]
         },
         "event": "minecraft:mad_at_wolf",
         "target": "self"
       },
       "minecraft:on_target_escape": {
         "filters": {
-          "target_with_families": [ "wolf" ],
-          "target_without_components": [ "minecraft:is_tamed" ]
+          "target_with_families": [
+            "wolf"
+          ],
+          "target_without_components": [
+            "minecraft:is_tamed"
+          ]
         },
         "event": "minecraft:on_calm",
         "target": "self"
       }
-
     },
-
-
     "events": {
       "minecraft:entity_spawned": {
         "sequence": [
@@ -418,8 +418,7 @@
             "randomize": [
               {
                 "weight": 90,
-                "remove": {
-                },
+                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:llama_adult",
@@ -429,13 +428,11 @@
               },
               {
                 "weight": 10,
-                "remove": {
-                },
+                "remove": {},
                 "add": {
                   "component_groups": [
                     "minecraft:llama_baby"
                   ]
-
                 }
               }
             ]
@@ -522,7 +519,6 @@
           }
         ]
       },
-
       "minecraft:entity_born": {
         "add": {
           "component_groups": [
@@ -530,7 +526,6 @@
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -544,7 +539,6 @@
           ]
         }
       },
-
       "minecraft:on_tame": {
         "remove": {
           "component_groups": [
@@ -558,8 +552,6 @@
           ]
         }
       },
-
-
       "minecraft:on_leash": {
         "add": {
           "component_groups": [
@@ -610,7 +602,6 @@
           ]
         }
       },
-
       "minecraft:on_chest": {
         "remove": {
           "component_groups": [
@@ -623,7 +614,6 @@
           ]
         }
       }
-
     }
   }
 }

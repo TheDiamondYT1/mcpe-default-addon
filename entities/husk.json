@@ -1,19 +1,17 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:zombie_husk_baby": {
-        "minecraft:is_baby": {  },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value":0.53125
+          "value": 0.53125
         },
         "minecraft:movement": {
           "value": 0.35,
           "max": 0.35
         }
       },
-
       "minecraft:zombie_husk_adult": {
         "minecraft:movement": {
           "value": 0.23,
@@ -25,21 +23,24 @@
             "zombie"
           ],
           "seats": {
-            "position": [ 0.0, 1.1, -0.35 ],
+            "position": [
+              0,
+              1.1,
+              -0.35
+            ],
             "lock_rider_rotation": 0
           }
         },
         "minecraft:behavior.mount_pathing": {
           "priority": 2,
           "speed_multiplier": 1.25,
-          "target_dist": 0.0,
+          "target_dist": 0,
           "track_target": true
         },
         "minecraft:scale": {
           "value": 1.0625
         }
       },
-
       "minecraft:zombie_husk_jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
@@ -47,7 +48,6 @@
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:husk"
@@ -60,12 +60,14 @@
         "width": 0.6,
         "height": 1.8
       },
-      "minecraft:nameable": {
-      },
-      
-      // Zombie_husk Components
+      "minecraft:nameable": {},
       "minecraft:type_family": {
-        "family":["husk", "zombie", "undead", "monster"]          
+        "family": [
+          "husk",
+          "zombie",
+          "undead",
+          "monster"
+        ]
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie.json"
@@ -73,7 +75,6 @@
       "minecraft:equipment": {
         "table": "loot_tables/entities/zombie_equipment.json"
       },
-  
       "minecraft:health": {
         "value": 20,
         "max": 20
@@ -93,15 +94,9 @@
         "avoid_water": false,
         "avoid_portals": false
       },
-      "minecraft:movement.basic": {
-        
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
-
-      // Zombie_husk Behaviors
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -137,20 +132,25 @@
         "within_radius": 25,
         "entity_types": [
           {
-            "filters": { "other_with_families": [ "player", "irongolem", "snowgolem", "villager" ] },
+            "filters": {
+              "other_with_families": [
+                "player",
+                "irongolem",
+                "snowgolem",
+                "villager"
+              ]
+            },
             "max_dist": 35
           }
         ]
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
           {
             "weight": 9500,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_adult"
@@ -159,25 +159,21 @@
           },
           {
             "weight": 425,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_baby"
               ]
-
             }
           },
           {
             "weight": 75,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:zombie_husk_baby",
                 "minecraft:zombie_husk_jockey"
               ]
-
             }
           }
         ]

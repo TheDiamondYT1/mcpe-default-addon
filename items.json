@@ -2,7 +2,6 @@
   "items": {
     "apple": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 4,
         "saturation_modifier": "low",
@@ -13,22 +12,21 @@
       "stack_by_data": true,
       "use_duration": 32,
       "foil": false,
-
       "food": {
-        "nutrition": 4, //
+        "nutrition": 4,
         "saturation_modifier": "supernatural",
-        "is_meat": false, //
+        "is_meat": false,
         "effects": [
           {
             "name": "regeneration",
-            "chance": 1.0,
+            "chance": 1,
             "duration": 5,
             "amplifier": 1
           },
           {
             "name": "absorption",
-            "chance": 1.0,
-            "duration": 120, // 2 * 60
+            "chance": 1,
+            "duration": 120,
             "amplifier": 0
           }
         ],
@@ -42,11 +40,11 @@
           {
             "name": "absorption",
             "chance": 0.66,
-            "duration": 120, // 2 * 60
+            "duration": 120,
             "amplifier": 0
           },
           {
-            "name": "resistance", // damage resistance
+            "name": "resistance",
             "chance": 0.66,
             "duration": 300,
             "amplifier": 0
@@ -60,13 +58,12 @@
         ]
       }
     },
-    "appleEnchanted" : {
+    "appleEnchanted": {
       "hand_equipped": false,
       "stack_by_data": true,
       "use_duration": 32,
       "foil": true,
       "hover_text_color": "light_purple",
-
       "food": {
         "nutrition": 4,
         "saturation_modifier": "supernatural",
@@ -74,25 +71,25 @@
         "effects": [
           {
             "name": "regeneration",
-            "chance": 1.0,
+            "chance": 1,
             "duration": 30,
             "amplifier": 4
           },
           {
             "name": "absorption",
-            "chance": 1.0,
-            "duration": 120, // 2 * 60
+            "chance": 1,
+            "duration": 120,
             "amplifier": 3
           },
           {
-            "name": "resistance", // damage resistance
-            "chance": 1.0,
+            "name": "resistance",
+            "chance": 1,
             "duration": 300,
             "amplifier": 0
           },
           {
             "name": "fire_resistance",
-            "chance": 1.0,
+            "chance": 1,
             "duration": 300,
             "amplifier": 0
           }
@@ -102,7 +99,6 @@
     "mushroom_stew": {
       "use_duration": 32,
       "max_stack_size": 1,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "normal",
@@ -112,7 +108,6 @@
     },
     "bread": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 5,
         "saturation_modifier": "normal",
@@ -121,7 +116,6 @@
     },
     "porkchop": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 3,
         "saturation_modifier": "low",
@@ -130,7 +124,6 @@
     },
     "cooked_porkchop": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 8,
         "saturation_modifier": "good",
@@ -141,7 +134,6 @@
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "poor",
@@ -152,7 +144,6 @@
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "poor",
@@ -163,7 +154,6 @@
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 1,
         "saturation_modifier": "poor",
@@ -174,7 +164,6 @@
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 1,
         "saturation_modifier": "poor",
@@ -186,7 +175,7 @@
             "amplifier": 3
           },
           {
-            "name": "nausea", // confusion
+            "name": "nausea",
             "duration": 15,
             "amplifier": 1
           },
@@ -198,11 +187,10 @@
         ]
       }
     },
-    "cooked_fish" : {
+    "cooked_fish": {
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 5,
         "saturation_modifier": "normal",
@@ -210,29 +198,26 @@
         "is_meat": true
       }
     },
-    "cooked_salmon" : {
+    "cooked_salmon": {
       "use_duration": 32,
       "max_damage": 0,
       "stacked_by_data": true,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "good",
         "is_meat": true
       }
     },
-    "cookie" : {
+    "cookie": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "poor",
         "is_meat": false
       }
     },
-    "melon" : {
+    "melon": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "low",
@@ -241,7 +226,6 @@
     },
     "beef": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 3,
         "saturation_modifier": "low",
@@ -250,16 +234,14 @@
     },
     "cooked_beef": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 8,
         "saturation_modifier": "good",
         "is_meat": true
       }
     },
-    "chicken" : {
+    "chicken": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "low",
@@ -274,27 +256,24 @@
         ]
       }
     },
-    "cooked_chicken" : {
+    "cooked_chicken": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "normal",
         "is_meat": true
       }
     },
-    "muttonRaw" : {
+    "muttonRaw": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "low",
         "is_meat": true
       }
     },
-    "muttonCooked" : {
+    "muttonCooked": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "good",
@@ -303,7 +282,6 @@
     },
     "rotten_flesh": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 4,
         "saturation_modifier": "poor",
@@ -320,7 +298,6 @@
     },
     "spider_eye": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "good",
@@ -328,16 +305,15 @@
         "effects": [
           {
             "name": "poison",
-            "chance": 1.0,
+            "chance": 1,
             "duration": 5,
             "amplifier": 0
           }
         ]
       }
     },
-    "carrot" : {
+    "carrot": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 3,
         "saturation_modifier": "normal",
@@ -348,9 +324,8 @@
         "plant_at": "farmland"
       }
     },
-    "potato" : {
+    "potato": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 1,
         "saturation_modifier": "low",
@@ -361,18 +336,16 @@
         "plant_at": "farmland"
       }
     },
-    "baked_potato" : {
+    "baked_potato": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 5,
         "saturation_modifier": "normal",
         "is_meat": false
       }
     },
-    "poisonous_potato" : {
+    "poisonous_potato": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 2,
         "saturation_modifier": "low",
@@ -387,27 +360,24 @@
         ]
       }
     },
-    "golden_carrot" : {
+    "golden_carrot": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "supernatural",
         "is_meat": false
       }
     },
-    "pumpkin_pie" : {
+    "pumpkin_pie": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 8,
         "saturation_modifier": "low",
         "is_meat": false
       }
     },
-    "rabbit" : {
+    "rabbit": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 3,
         "saturation_modifier": "low",
@@ -416,7 +386,6 @@
     },
     "cooked_rabbit": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 5,
         "saturation_modifier": "normal",
@@ -426,7 +395,6 @@
     "rabbit_stew": {
       "use_duration": 32,
       "max_stack_size": 1,
-
       "food": {
         "nutrition": 10,
         "saturation_modifier": "normal",
@@ -434,9 +402,8 @@
         "is_meat": true
       }
     },
-    "beetroot" : {
+    "beetroot": {
       "use_duration": 32,
-
       "food": {
         "nutrition": 1,
         "saturation_modifier": "normal",
@@ -447,7 +414,6 @@
       "id": 203,
       "use_duration": 32,
       "max_stack_size": 1,
-
       "food": {
         "nutrition": 6,
         "saturation_modifier": "normal",
@@ -455,9 +421,9 @@
         "is_meat": false
       }
     },
-    "wheat_seeds" : {
+    "wheat_seeds": {
       "seed": {
-        "crop_result": "wheat", // wheatCrops
+        "crop_result": "wheat",
         "plant_at": "farmland"
       }
     },
@@ -467,21 +433,19 @@
         "plant_at": "farmland"
       }
     },
-    "melon_seeds" : {
-
+    "melon_seeds": {
       "seed": {
         "crop_result": "melon_stem",
         "plant_at": "farmland"
       }
     },
-    "nether_wart" : {
-
+    "nether_wart": {
       "seed": {
         "crop_result": "nether_wart",
         "plant_at": "soul_sand"
       }
     },
-    "beetroot_seeds" : {
+    "beetroot_seeds": {
       "seed": {
         "crop_result": "beetroot",
         "plant_at": "farmland"
@@ -490,14 +454,12 @@
     "camera": {
       "use_duration": 100000,
       "block": "camera",
-
       "camera": {
         "black_bars_duration": 0.2,
         "black_bars_screen_ratio": 0.08,
         "shutter_duration": 0.2,
-        "picture_duration": 1.0,
+        "picture_duration": 1,
         "slide_away_duration": 0.2
-
       }
     }
   }

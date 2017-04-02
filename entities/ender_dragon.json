@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "dragon_sitting": {
         "minecraft:behavior.dragonlanding": {
@@ -38,13 +37,14 @@
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:ender_dragon"
       },
       "minecraft:type_family": {
-        "family": [ "dragon" ]
+        "family": [
+          "dragon"
+        ]
       },
       "minecraft:health": {
         "value": 200,
@@ -69,7 +69,7 @@
         "damage": 3
       },
       "minecraft:fall_damage": {
-        "value": 0.0
+        "value": 0
       },
       "minecraft:on_start_landing": {
         "event": "minecraft:start_land",
@@ -84,11 +84,9 @@
         "target": "self"
       }
     },
-
     "events": {
       "minecraft:entity_spawned": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "dragon_flying"

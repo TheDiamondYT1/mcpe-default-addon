@@ -1,18 +1,14 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:pig_zombie_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
           "value": 0.5
         }
       },
-
-      "minecraft:pig_zombie_adult": {
-      },
+      "minecraft:pig_zombie_adult": {},
       "minecraft:pig_zombie_angry": {
         "minecraft:angry": {
           "duration": 25,
@@ -31,7 +27,6 @@
         }
       }
     },
-
     "components": {
       "minecraft:breathable": {
         "totalSupply": 15,
@@ -41,24 +36,24 @@
         "width": 0.6,
         "height": 1.8
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:navigation.walk": {
         "can_float": true
       },
-      "minecraft:movement.basic": {
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:fire_immune": true,
       "minecraft:burns_in_daylight": false,
       "minecraft:identifier": {
         "id": "minecraft:zombie_pigman"
       },
       "minecraft:type_family": {
-        "family": [ "zombie_pigman", "undead", "monster" ]
+        "family": [
+          "zombie_pigman",
+          "undead",
+          "monster"
+        ]
       },
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie_pigman.json"
@@ -99,11 +94,11 @@
       },
       "minecraft:behavior.random_stroll": {
         "priority": 7,
-        "speed_multiplier": 1.0
+        "speed_multiplier": 1
       },
       "minecraft:behavior.look_at_player": {
         "priority": 8,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -112,14 +107,10 @@
       "minecraft:behavior.hurt_by_target": {
         "priority": 1
       }
-
     },
-
-
     "events": {
       "minecraft:entity_transformed": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:pig_zombie_adult",
@@ -131,8 +122,7 @@
         "randomize": [
           {
             "weight": 95,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:pig_zombie_adult",
@@ -142,14 +132,12 @@
           },
           {
             "weight": 5,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:pig_zombie_baby",
                 "minecraft:pig_zombie_calm"
               ]
-
             }
           }
         ]

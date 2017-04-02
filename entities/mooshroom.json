@@ -1,7 +1,6 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:mooshroom_become_cow": {
         "minecraft:transformation": {
@@ -9,10 +8,9 @@
         }
       },
       "minecraft:cow_baby": {
-        "minecraft:is_baby": {
-        },
+        "minecraft:is_baby": {},
         "minecraft:scale": {
-          "value":0.5
+          "value": 0.5
         },
         "minecraft:ageable": {
           "threshold": 1200,
@@ -27,14 +25,13 @@
           "speed_multiplier": 1.1
         }
       },
-
       "minecraft:cow_adult": {
         "minecraft:loot": {
           "table": "loot_tables/entities/cow.json"
         },
         "minecraft:behavior.breed": {
           "priority": 3,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         },
         "minecraft:breedable": {
           "requireTame": false,
@@ -73,7 +70,9 @@
             "use_item": false,
             "hurt_item": 1,
             "play_sounds": "shear",
-            "spawn_items": { "table": "loot_tables/entities/mooshroom_shear.json" },
+            "spawn_items": {
+              "table": "loot_tables/entities/mooshroom_shear.json"
+            },
             "interact_text": "action.interact.mooshear"
           },
           {
@@ -90,21 +89,21 @@
           }
         ]
       },
-
       "minecraft:cow_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:mooshroom"
       },
       "minecraft:type_family": {
-        "family": [ "mushroomcow" ]
+        "family": [
+          "mushroomcow"
+        ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
@@ -114,8 +113,7 @@
         "width": 0.9,
         "height": 1.3
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:health": {
         "value": 10,
         "max": 10
@@ -128,17 +126,13 @@
         "can_float": true,
         "avoid_water": true
       },
-      "minecraft:movement.basic": {
-        
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -154,7 +148,11 @@
           "zombie"
         ],
         "seats": {
-          "position": [0.0, 1.105, 0.0]
+          "position": [
+            0,
+            1.105,
+            0
+          ]
         }
       },
       "minecraft:behavior.float": {
@@ -167,12 +165,12 @@
       "minecraft:behavior.mount_pathing": {
         "priority": 2,
         "speed_multiplier": 1.5,
-        "target_dist": 0.0,
+        "target_dist": 0,
         "track_target": true
       },
       "minecraft:behavior.breed": {
         "priority": 3,
-        "speed_multiplier": 1.0
+        "speed_multiplier": 1
       },
       "minecraft:behavior.tempt": {
         "priority": 4,
@@ -191,19 +189,16 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 9
       }
     },
-
-
     "events": {
       "become_cow": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:mooshroom_become_cow"
@@ -214,8 +209,7 @@
         "randomize": [
           {
             "weight": 95,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:cow_adult"
@@ -224,28 +218,23 @@
           },
           {
             "weight": 5,
-            "remove": {
-            },
+            "remove": {},
             "add": {
               "component_groups": [
                 "minecraft:cow_baby"
               ]
-
             }
           }
         ]
       },
-
       "minecraft:entity_born": {
-        "remove": {
-        },
+        "remove": {},
         "add": {
           "component_groups": [
             "minecraft:cow_baby"
           ]
         }
       },
-
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -258,7 +247,6 @@
           ]
         }
       },
-
       "minecraft:on_leash": {
         "add": {
           "component_groups": [

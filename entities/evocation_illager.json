@@ -5,19 +5,19 @@
       "minecraft:identifier": {
         "id": "minecraft:evocation_illager"
       },
-
       "minecraft:type_family": {
-        "family": [ "evocation_illager", "monster", "illager" ]
+        "family": [
+          "evocation_illager",
+          "monster",
+          "illager"
+        ]
       },
-
       "minecraft:breathable": {
         "totalSupply": 15,
         "suffocateTime": 0
       },
-      "minecraft:caster": {
-      },
-      "minecraft:nameable": {
-      },
+      "minecraft:caster": {},
+      "minecraft:nameable": {},
       "minecraft:loot": {
         "table": "loot_tables/entities/evocation_illager.json"
       },
@@ -39,12 +39,9 @@
         "can_open_doors": true,
         "avoid_water": true
       },
-      "minecraft:movement.basic": {
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -52,10 +49,12 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": "player" },
+            "filters": {
+              "other_with_families": "player"
+            },
             "max_dist": 8,
             "walk_speed_multiplier": 0.6,
-            "sprint_speed_multiplier": 1.0
+            "sprint_speed_multiplier": 1
           }
         ]
       },
@@ -67,7 +66,14 @@
         "priority": 2,
         "entity_types": [
           {
-            "filters": { "other_with_families": [ "player", "irongolem", "snowgolem", "villager" ] },
+            "filters": {
+              "other_with_families": [
+                "player",
+                "irongolem",
+                "snowgolem",
+                "villager"
+              ]
+            },
             "max_dist": 16
           }
         ],
@@ -94,8 +100,8 @@
             "circles": [
               {
                 "radius": 1.5,
-				        "delay": 1,
-			          "num_entities_spawned": 5
+                "delay": 1,
+                "num_entities_spawned": 5
               },
               {
                 "radius": 2.5,
@@ -117,20 +123,24 @@
       },
       "minecraft:behavior.wololo_spell_goal": {
         "priority": 5,
-        "target_types": [ "minecraft:sheep" ],
+        "target_types": [
+          "minecraft:sheep"
+        ],
         "target_color": "blue",
         "change_color": "red",
         "range": 16
       },
       "minecraft:behavior.look_at_player": {
         "priority": 9,
-        "look_distance": 3.0,
-        "probability": 1.0
+        "look_distance": 3,
+        "probability": 1
       },
       "minecraft:behavior.look_at_entity": {
         "priority": 10,
-        "look_distance": 8.0,
-        "filters": { "other_with_families": "mob" }
+        "look_distance": 8,
+        "filters": {
+          "other_with_families": "mob"
+        }
       },
       "minecraft:behavior.hurt_by_target": {
         "priority": 1

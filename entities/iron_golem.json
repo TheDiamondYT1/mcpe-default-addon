@@ -1,12 +1,11 @@
 {
   "minecraft:entity": {
     "format_version": "1.1.0",
-
     "component_groups": {
       "minecraft:golem_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1.0
+          "speed_multiplier": 1
         }
       },
       "minecraft:player_created": {
@@ -38,16 +37,16 @@
         }
       }
     },
-
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:iron_golem"
       },
       "minecraft:type_family": {
-        "family": [ "irongolem" ]
+        "family": [
+          "irongolem"
+        ]
       },
-      "minecraft:nameable": {
-      },
+      "minecraft:nameable": {},
       "minecraft:collision_box": {
         "width": 1.4,
         "height": 2.9
@@ -66,13 +65,9 @@
         "can_float": false,
         "avoid_water": true
       },
-      "minecraft:movement.basic": {
-        
-      },
-      "minecraft:jump.static": {
-      },
-      "minecraft:can_climb": {
-      },
+      "minecraft:movement.basic": {},
+      "minecraft:jump.static": {},
+      "minecraft:can_climb": {},
       "minecraft:attack": {
         "damage": {
           "range_min": 7,
@@ -80,15 +75,15 @@
         }
       },
       "minecraft:fall_damage": {
-        "value": 0.0
+        "value": 0
       },
       "minecraft:knockback_resistance": {
-        "value": 1.0
+        "value": 1
       },
       "minecraft:leashable": {
-        "soft_distance": 4.0,
-        "hard_distance": 6.0,
-        "max_distance": 10.0,
+        "soft_distance": 4,
+        "hard_distance": 6,
+        "max_distance": 10,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -100,7 +95,7 @@
       },
       "minecraft:behavior.melee_attack": {
         "priority": 1,
-        "target_dist": 1.0,
+        "target_dist": 1,
         "track_target": true
       },
       "minecraft:behavior.move_towards_target": {
@@ -127,7 +122,7 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "look_distance": 6.0,
+        "look_distance": 6,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
@@ -148,7 +143,6 @@
         "must_reach": true
       }
     },
-
     "events": {
       "minecraft:from_player": {
         "add": {
