@@ -1,12 +1,14 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
+
     "component_groups": {
       "minecraft:horse_baby": {
-        "minecraft:is_baby": {},
+        "minecraft:is_baby": {
+        },
         "minecraft:scale_by_age": {
           "start_scale": 0.5,
-          "end_scale": 1
+          "end_scale": 1.0
         },
         "minecraft:ageable": {
           "duration": 1200,
@@ -47,9 +49,10 @@
         },
         "minecraft:behavior.follow_parent": {
           "priority": 4,
-          "speed_multiplier": 1
+          "speed_multiplier": 1.0
         }
       },
+
       "minecraft:horse_adult": {
         "minecraft:loot": {
           "table": "loot_tables/entities/horse.json"
@@ -60,9 +63,10 @@
         },
         "minecraft:behavior.breed": {
           "priority": 2,
-          "speed_multiplier": 1
+          "speed_multiplier": 1.0
         }
       },
+
       "minecraft:horse_wild": {
         "minecraft:rideable": {
           "seat_count": 1,
@@ -72,17 +76,14 @@
           ],
           "interact_text": "action.interact.mount",
           "seats": {
-            "position": [
-              0,
-              1.1,
-              -0.2
-            ]
+            "position": [0.0, 1.1, -0.2]
           }
+
         },
         "minecraft:behavior.mount_pathing": {
           "priority": 2,
           "speed_multiplier": 1.5,
-          "target_dist": 0,
+          "target_dist": 0.0,
           "track_target": true
         },
         "minecraft:tamemount": {
@@ -139,8 +140,10 @@
           }
         }
       },
+
       "minecraft:horse_tamed": {
-        "minecraft:is_tamed": {},
+        "minecraft:is_tamed": {
+        },
         "minecraft:rideable": {
           "priority": 0,
           "seat_count": 1,
@@ -150,14 +153,13 @@
           ],
           "interact_text": "action.interact.ride.horse",
           "seats": {
-            "position": [
-              0,
-              1.1,
-              -0.2
-            ]
+            "position": [ 0.0, 1.1, -0.2 ]
           }
+
         },
-        "minecraft:behavior.player_ride_tamed": {},
+        "minecraft:behavior.player_ride_tamed": {
+
+        },
         "minecraft:inventory": {
           "inventory_size": 2,
           "container_type": "horse"
@@ -205,16 +207,24 @@
           ]
         }
       },
+
       "minecraft:horse_leashed": {
         "minecraft:behavior.move_towards_restriction": {
           "priority": 2,
-          "speed_multiplier": 1
+          "speed_multiplier": 1.0
         }
       },
+
       "minecraft:horse_saddled": {
-        "minecraft:is_saddled": {}
+        "minecraft:is_saddled": {
+        },
+        "minecraft:input_ground_controlled": {
+        },
+        "minecraft:can_power_jump": {
+        }
       }
     },
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:horse"
@@ -222,20 +232,30 @@
       "minecraft:equippable": {
         "slots": [
           {
+            "slot": 0,
             "item": "saddle",
+            "accepted_items": ["saddle"],
             "on_equip": {
               "event": "minecraft:horse_saddled"
             },
             "on_unequip": {
               "event": "minecraft:horse_unsaddled"
             }
+          },
+          {
+            "slot": 1,
+            "item": "horsearmoriron",
+            "accepted_items": [
+              "horsearmorleather",
+              "horsearmoriron",
+              "horsearmorgold",
+              "horsearmordiamond"
+            ]
           }
         ]
       },
       "minecraft:type_family": {
-        "family": [
-          "horse"
-        ]
+        "family": [ "horse" ]
       },
       "minecraft:breathable": {
         "totalSupply": 15,
@@ -253,21 +273,31 @@
       },
       "minecraft:movement": {
         "value": {
-          "range_min": 0.1125,
+          "range_min": 0.1125, 
           "range_max": 0.3375
         }
       },
-      "minecraft:nameable": {},
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "avoid_water": true
+      },
+      "minecraft:movement.basic": {
+        
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:nameable": {
+      },
       "minecraft:horse.jump_strength": {
         "value": {
-          "range_min": 0.4,
-          "range_max": 1
+          "range_min": 0.4, 
+          "range_max": 1.0
         }
       },
       "minecraft:leashable": {
-        "soft_distance": 4,
-        "hard_distance": 6,
-        "max_distance": 10,
+        "soft_distance": 4.0,
+        "hard_distance": 6.0,
+        "max_distance": 10.0,
         "on_leash": {
           "event": "minecraft:on_leash",
           "target": "self"
@@ -322,13 +352,14 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 7,
-        "look_distance": 6,
+        "look_distance": 6.0,
         "probability": 0.02
       },
       "minecraft:behavior.random_look_around": {
         "priority": 8
       }
     },
+
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
@@ -351,6 +382,7 @@
           }
         ]
       },
+
       "minecraft:entity_born": {
         "add": {
           "component_groups": [
@@ -358,6 +390,7 @@
           ]
         }
       },
+
       "minecraft:on_tame": {
         "remove": {
           "component_groups": [
@@ -370,6 +403,7 @@
           ]
         }
       },
+
       "minecraft:ageable_grow_up": {
         "remove": {
           "component_groups": [
@@ -383,6 +417,7 @@
           ]
         }
       },
+
       "minecraft:on_leash": {
         "add": {
           "component_groups": [
@@ -397,6 +432,7 @@
           ]
         }
       },
+
       "minecraft:horse_saddled": {
         "add": {
           "component_groups": [

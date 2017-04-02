@@ -1,14 +1,13 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:player"
       },
       "minecraft:type_family": {
-        "family": [
-          "player"
-        ]
+        "family": [ "player" ]
       },
       "minecraft:loot": {
         "table": "loot_tables/empty.json"
@@ -16,6 +15,8 @@
       "minecraft:collision_box": {
         "width": 0.6,
         "height": 1.8
+      },
+      "minecraft:can_climb": {
       },
       "minecraft:movement": {
         "value": 0.1,
@@ -25,7 +26,7 @@
         "damage": 1
       },
       "minecraft:player.saturation": {
-        "value": 20
+        "value": 20 
       },
       "minecraft:player.exhaustion": {
         "value": 0,
@@ -48,6 +49,8 @@
         "alwaysShow": true,
         "allowNameTagRenaming": false
       }
+
     }
+
   }
 }

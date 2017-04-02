@@ -1,6 +1,7 @@
 {
   "minecraft:entity": {
-    "version": 1,
+    "format_version": "1.1.0",
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:shulker_bullet"
@@ -21,9 +22,10 @@
             "durationeasy": 200,
             "durationnormal": 200,
             "durationhard": 200,
-            "amplifier": 8
+            "amplifier": 1
           },
-          "remove_on_hit": {},
+          "remove_on_hit": {
+          },
           "particle_on_hit": {
             "particle_type": "largeexplode",
             "on_other_hit": true
@@ -31,16 +33,13 @@
         },
         "hitSound": "bullet.hit",
         "destroyOnHurt": true,
+        "critParticleOnHurt": true,
         "power": 1.6,
         "gravity": 0.05,
         "uncertaintyBase": 16,
         "uncertaintyMultiplier": 4,
         "anchor": 1,
-        "offset": [
-          0,
-          -0.1,
-          0
-        ],
+        "offset": [ 0, -0.1, 0 ],
         "homing": true
       }
     }

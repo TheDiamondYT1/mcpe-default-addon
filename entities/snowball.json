@@ -1,6 +1,7 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:snowball"
@@ -17,11 +18,11 @@
             "damage": 3,
             "knockback": true
           },
-          "remove_on_hit": {}
+          "remove_on_hit": { }
         },
         "power": 1.5,
         "gravity": 0.03,
-        "angleoffset": 0
+        "angleoffset": 0.0
       }
     }
   }

@@ -1,37 +1,54 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
-    "component_groups": {},
+    "format_version": "1.1.0",
+
+    "component_groups": {
+    },
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:bat"
       },
       "minecraft:type_family": {
-        "family": [
-          "bat"
-        ]
+        "family":["bat"]          
       },
       "minecraft:breathable": {
         "totalSupply": 15,
         "suffocateTime": 0
       },
-      "minecraft:collision_box": {
-        "width": 0.5,
-        "height": 0.9
+     "minecraft:collision_box": {
+      "width": 0.5,
+      "height": 0.9
+     },
+     "minecraft:fall_damage": {
+       "value": 0.0
       },
-      "minecraft:fall_damage": {
-        "value": 0
-      },
+
       "minecraft:movement": {
-        "value": 0.1,
-        "max": 0.1
+        "value": 0.3,
+        "max": 0.3
+      },
+      "minecraft:navigation.float": {
+        "can_float": true
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:float_wander": {
+        "xz_dist": 10,
+        "y_dist": 7,
+        "y_offset": -2.0
+      },
+      "minecraft:can_fly": {
       },
       "minecraft:health": {
         "value": 6,
         "max": 6
       },
-      "minecraft:nameable": {}
+       "minecraft:nameable": {
+	    }
     },
-    "events": {}
+
+    "events": {
+    }
   }
 }

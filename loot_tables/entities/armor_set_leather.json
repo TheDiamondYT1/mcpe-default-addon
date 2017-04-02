@@ -10,7 +10,7 @@
           "functions": [
             {
               "function": "enchant_random_gear",
-              "chance": 0.5
+              "chance": 0.50
             }
           ],
           "pools": [
@@ -32,9 +32,10 @@
                   "functions": [
                     {
                       "function": "enchant_random_gear",
-                      "chance": 0.5
+                      "chance": 0.50
                     }
                   ],
+
                   "pools": [
                     {
                       "conditions": [
@@ -54,9 +55,10 @@
                           "functions": [
                             {
                               "function": "enchant_random_gear",
-                              "chance": 0.5
+                              "chance": 0.50
                             }
                           ],
+
                           "pools": [
                             {
                               "conditions": [
@@ -76,7 +78,7 @@
                                   "functions": [
                                     {
                                       "function": "enchant_random_gear",
-                                      "chance": 0.5
+                                      "chance": 0.50
                                     }
                                   ]
                                 }

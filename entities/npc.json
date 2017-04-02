@@ -1,6 +1,7 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
+
     "components": {
       "minecraft:damage_sensor": [
         {
@@ -12,14 +13,13 @@
         "id": "minecraft:npc"
       },
       "minecraft:type_family": {
-        "family": [
-          "npc"
-        ]
+        "family": [ "npc" ]
       },
+      "minecraft:fire_immune": true,
       "minecraft:health": {
         "value": 20,
         "max": 20,
-        "min": 20
+        "min":  20
       },
       "minecraft:movement": {
         "value": 0.5
@@ -33,14 +33,17 @@
       },
       "minecraft:behavior.look_at_player": {
         "priority": 0,
-        "look_distance": 6,
+        "look_distance": 6.0,
         "probability": 0.02
       },
-      "minecraft:npc": {},
+      "minecraft:npc": {
+      },
       "minecraft:nameable": {
         "alwaysShow": true,
         "allowNameTagRenaming": false
       }
+
     }
+
   }
 }

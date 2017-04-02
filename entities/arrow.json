@@ -1,21 +1,21 @@
 {
   "minecraft:entity": {
-    "version": 1,
+    "format_version": "1.1.0",
+
     "component_groups": {
       "minecraft:hard_arrow": {
         "minecraft:projectile": {
           "onHit": {
             "impact_damage": {
-              "damage": [
-                1,
-                5
-              ],
+              "damage": [ 1, 5 ],
               "knockback": true,
               "semirandomdiffdamage": false,
               "destroyonhit": true
             },
-            "stick_in_ground": {},
-            "arrow_effect": {}
+            "stick_in_ground": {
+            },
+            "arrow_effect": {
+            }
           },
           "hitSound": "bow.hit",
           "power": 1.6,
@@ -24,13 +24,10 @@
           "uncertaintyMultiplier": 4,
           "anchor": 1,
           "shouldbounce": true,
-          "offset": [
-            0,
-            -0.1,
-            0
-          ]
+          "offset": [ 0, -0.1, 0 ]
         }
       },
+
       "minecraft:player_arrow": {
         "minecraft:projectile": {
           "onHit": {
@@ -40,27 +37,26 @@
               "semirandomdiffdamage": true,
               "destroyonhit": true
             },
-            "stick_in_ground": {},
-            "arrow_effect": {}
+            "stick_in_ground": {
+            },
+            "arrow_effect": {
+            }
           },
           "hitSound": "bow.hit",
-          "power": 1.6,
+          "power": 5.0,
           "gravity": 0.05,
           "uncertaintyBase": 16,
           "uncertaintyMultiplier": 4,
           "anchor": 1,
           "shouldbounce": true,
-          "offset": [
-            0,
-            -0.1,
-            0
-          ]
+          "offset": [ 0, -0.1, 0 ]
         }
       }
     },
+
     "components": {
       "minecraft:identifier": {
-        "id": "minecraft:arrow.skeleton"
+        "id": "minecraft:arrow"
       },
       "minecraft:collision_box": {
         "width": 0.5,
@@ -69,16 +65,15 @@
       "minecraft:projectile": {
         "onHit": {
           "impact_damage": {
-            "damage": [
-              1,
-              4
-            ],
+            "damage": [ 1, 4 ],
             "knockback": true,
             "semirandomdiffdamage": false,
             "destroyonhit": true
           },
-          "stick_in_ground": {},
-          "arrow_effect": {}
+          "stick_in_ground": {
+          },
+          "arrow_effect": {
+          }
         },
         "hitSound": "bow.hit",
         "power": 1.6,
@@ -87,13 +82,10 @@
         "uncertaintyMultiplier": 4,
         "anchor": 1,
         "shouldbounce": true,
-        "offset": [
-          0,
-          -0.1,
-          0
-        ]
+        "offset": [ 0, -0.1, 0 ]
       }
     },
+
     "events": {
       "minecraft:entity_spawned": {
         "sequence": [
@@ -102,9 +94,7 @@
               "is_world_difficulty": "hard"
             },
             "add": {
-              "component_groups": [
-                "minecraft:hard_arrow"
-              ]
+              "component_groups": [ "minecraft:hard_arrow" ]
             }
           },
           {
@@ -112,13 +102,12 @@
               "other_with_families": "player"
             },
             "add": {
-              "component_groups": [
-                "minecraft:player_arrow"
-              ]
+              "component_groups" : [ "minecraft:player_arrow" ]
             }
           }
         ]
       }
     }
+
   }
 }

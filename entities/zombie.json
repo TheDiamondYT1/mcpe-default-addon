@@ -1,9 +1,10 @@
 {
   "minecraft:entity": {
-    "format_version": 0.1,
+    "format_version": "1.1.0",
+
     "component_groups": {
       "minecraft:zombie_baby": {
-        "minecraft:is_baby": {},
+        "minecraft:is_baby": { },
         "minecraft:scale": {
           "value": 0.5
         },
@@ -12,33 +13,22 @@
           "max": 0.35
         }
       },
+
       "minecraft:zombie_adult": {
         "minecraft:movement": {
           "value": 0.23,
           "max": 0.23
         },
-        "minecraft:burns_in_daylight": {},
-        "minecraft:rideable": {
-          "seat_count": 1,
-          "family_types": [
-            "zombie"
-          ],
-          "seats": {
-            "position": [
-              0,
-              1.1,
-              -0.35
-            ],
-            "lock_rider_rotation": 0
-          }
+        "minecraft:burns_in_daylight": {
         },
         "minecraft:behavior.mount_pathing": {
           "priority": 2,
           "speed_multiplier": 1.25,
-          "target_dist": 0,
+          "target_dist": 0.0,
           "track_target": true
         }
       },
+
       "minecraft:zombie_jockey": {
         "minecraft:behavior.find_mount": {
           "priority": 1,
@@ -46,21 +36,17 @@
         }
       }
     },
+
     "components": {
       "minecraft:identifier": {
         "id": "minecraft:zombie"
       },
-      "minecraft:nameable": {},
-      "minecraft:type_family": {
-        "family": [
-          "zombie",
-          "undead",
-          "monster"
-        ]
+      "minecraft:nameable": {
       },
-      "minecraft:breathable": {
-        "totalSupply": 15,
-        "suffocateTime": 0
+
+      // Zombie Components
+      "minecraft:type_family": {
+        "family": [ "zombie", "undead", "monster" ]
       },
       "minecraft:collision_box": {
         "width": 0.6,
@@ -68,6 +54,16 @@
       },
       "minecraft:equipment": {
         "table": "loot_tables/entities/zombie_equipment.json"
+      },
+      "minecraft:navigation.walk": {
+        "can_float": true,
+        "can_pass_doors": true
+      },
+      "minecraft:movement.basic": {
+      },
+      "minecraft:jump.static": {
+      },
+      "minecraft:can_climb": {
       },
       "minecraft:health": {
         "value": 20,
@@ -79,6 +75,8 @@
       "minecraft:loot": {
         "table": "loot_tables/entities/zombie.json"
       },
+
+      // Zombie Behaviors
       "minecraft:behavior.float": {
         "priority": 0
       },
@@ -114,25 +112,20 @@
         "within_radius": 25,
         "entity_types": [
           {
-            "filters": {
-              "other_with_families": [
-                "player",
-                "irongolem",
-                "snowgolem",
-                "villager"
-              ]
-            },
+            "filters": { "other_with_families": [ "player", "irongolem", "snowgolem", "villager" ] },
             "max_dist": 35
           }
         ]
       }
     },
+
     "events": {
       "minecraft:entity_spawned": {
         "randomize": [
           {
             "weight": 380,
-            "remove": {},
+            "remove": {
+            },
             "add": {
               "component_groups": [
                 "minecraft:zombie_adult"
@@ -141,16 +134,19 @@
           },
           {
             "weight": 17,
-            "remove": {},
+            "remove": {
+            },
             "add": {
               "component_groups": [
                 "minecraft:zombie_baby"
               ]
+
             }
           },
           {
             "weight": 3,
-            "remove": {},
+            "remove": {
+            },
             "add": {
               "component_groups": [
                 "minecraft:zombie_baby",
